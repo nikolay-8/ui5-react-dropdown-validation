@@ -1,14 +1,3 @@
-## UI5 Web Components React - Next.js App Router Template
-
-This template shows how to use the [Next.js](https://nextjs.org/) App Router with UI5 Web Components for React.
-
-## How to use this template
-
-```bash
-npx degit SAP/ui5-webcomponents-react/templates/nextjs-app#main my-project
-cd my-project
-```
-
 ## Getting Started
 
 First, install the node_modules:
@@ -33,13 +22,16 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Testing the validation issue with the "UI5 Components for React" dropdown
 
-## Learn More
+After following the steps in the "Getting Started" section and starting the app at [http://localhost:3000](http://localhost:3000) follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Refresh the page - you'll notice that the fields are empty and they only fill with data in about 1 second. This behaviour simulates the loading of data by sending an HTTP request to a backend API first.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Click on the "Submit" button - we see validation errors below two of the fields, including the dropdown field. Even though there is a selected value in the dropdown.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Manually select another option in the dropdown
+
+4. Change the value in "Last Name" field by one or more characters (but don't leave it blank) and press the Tab button
+
+5. Click the "Submit" button again. No validation errors are shown and instead we see a popup saying "Submit with no validation errors"
