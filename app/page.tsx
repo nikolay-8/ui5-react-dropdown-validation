@@ -17,9 +17,6 @@ import {
 } from "@ui5/webcomponents-react";
 import { useEffect, useState } from "react";
 
-// Try to use the exact versions you are using in your project.
-// Try to make it as close as possible with your example (passing the data from props, passing the "submit" function to another component, etc.)
-
 const formFields = [
   { name: "firstName", label: "First Name", required: false },
   {
